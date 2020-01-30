@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    color:black;
+    font-family:Helvetica;
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". title title ."
+    ". header sidebar ."
+    ". content content ."
+    ". foto footer .";
+    grid-gap: 10px;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-size: xx-large;
+    height: 70px;
+}
+
+.header {
+    grid-area: header;
+    
+    
+}
+
+.sidebar {
+    grid-area: sidebar;
+    justify-self: right;
+}
+
+.content {
+    grid-area: content;
+    
+    
+}
+
+.footer {
+    grid-area: footer;
+    align-self: right;
+}
+
+.foto {
+    grid-area: foto;
+}
+
+.grid div:nth-child(even){
+    background-color: white;
+    color: black;
+    
+}
+
+.grid div:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
